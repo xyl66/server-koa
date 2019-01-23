@@ -358,6 +358,31 @@ const commonDatas = {
                 }
             ],
             "pageName":"loanPage"
+        },
+        {
+            "arStatusList":[
+                {
+                    "arStatusTypeEngName":"all",
+                    "arStatusTypeId":null,
+                    "arStatusTypeName":"全部"
+                },
+                {
+                    "arStatusTypeEngName":"discountApplying",
+                    "arStatusTypeId":22,
+                    "arStatusTypeName":"貼現申請中"
+                },
+                {
+                    "arStatusTypeEngName":"discountAuditing",
+                    "arStatusTypeId":24,
+                    "arStatusTypeName":"放款核實"
+                },
+                {
+                    "arStatusTypeEngName":"discountSigning",
+                    "arStatusTypeId":23,
+                    "arStatusTypeName":"贴现合同簽署中"
+                }
+            ],
+            "pageName":"inFinancingPage"
         }
     ],
     "msg":"请求成功",
@@ -367,7 +392,8 @@ const commonDatas = {
  comdata: {
    data:{
      result: 'true',
-     message: ' 操作成功'
+     message: ' 操作成功',
+     isSignNow: 'true'
    },
    msg: '操作成功',
    status: 1
@@ -377,14 +403,16 @@ const commonDatas = {
     "data":[
         {
             "arStatusTypeName":"已確認",
-            "billBookAmt":18406.44,
+            "billBookAmt":99999999.44,
             "billBookCurr":null,
             "billDueDate":1530288000000,
             "billId":"5100002408",
+            "arSourceDesc":"自有AR",
             "billPayDate":null,
             "billPayStatus":"付款单已确认",
             signStatusName: '签核中',
             signStatusId: 0,
+            operateControllerStatus:1,
             "billStartDate":1520870400000,
             "buyerCustNo":"A086041",
             "checkedStatus":2,
@@ -450,6 +478,7 @@ const commonDatas = {
             "billPayStatus":"付款单已确认",
             signStatusName: '签核中',
             signStatusId: 1,
+            operateControllerStatus:1,
             "billStartDate":1523548800000,
             "buyerCustNo":"A086041",
             "checkedStatus":3,
@@ -464,7 +493,7 @@ const commonDatas = {
             "custToName":"",
             "discountAuditStatus":1,
             "isInterfaceMode":0,
-            "isMasterAr":1,
+            "isMasterAr":2,
             "isNeedDiscountAudit":0,
             "loanAmt":22604.4,
             "masterChainId":"AR20180414000005",
@@ -515,10 +544,11 @@ const commonDatas = {
             "billPayStatus":"付款单已确认",
             signStatusName: '签核中',
             signStatusId: 2,
+            operateControllerStatus:1,
             "billStartDate":1512921600000,
             "buyerCustNo":"A086041",
             "checkedStatus":22,
-            "companyName":"深圳富泰宏精密工業有限公司",
+            "companyName":"深圳富泰宏精密工業有限公司2",
             "createtime":1513027773000,
             "currencyDesc":null,
             "currencyName":null,
@@ -824,111 +854,67 @@ const commonDatas = {
 },
 arDetails:{
     "data":{
-        "arAvailableAmt":10000,
-        "arGenerateDate":1530172132000,
-        "arSourceDesc":"购入",
-        "arStatusTypeName":"已確認",
-        "billBookAmt":10000,
-        "billPayDate":1538323200000,
-        "checkedStatus":2,
-        "companyName":"深圳市裕展精密科技有限公司",
+        "actualRepayDate":null,
+        "admissionAmt":null,
+        "arAvailableAmt":783,
+        "arGenerateDate":1533082818000,
+        "arSourceDesc":"自有AR",
+        "arStatusTypeName":"保理方申请中",
+        "billBookAmt":783,
+        "billId":"NTT3I70085",
+        "billPayDate":1541001600000,
+        "billPayStatus":"会计确认",
+        "checkedStatus":22,
+        "companyName":"鴻富準精密工業(深圳)有限公司",
         "contractList":[
             {
-                "contractId":"356d7075-7846-442e-a2c8-b59bd71ead3e",
-                "contractName":"应收账款质押合同",
-                "contractNo":"356d7075-7846-442e-a2c8-b59bd71ead3e",
-                "contractUrl":"/pdf/ec82679f-5394-4bfa-ac15-bf18e2334943.pdf",
-                "status":0
-            },
-            {
-                "contractId":"ebe36732-f266-4c87-a84d-cd3f55bd14d2",
-                "contractName":"收费协议",
-                "contractNo":"ebe36732-f266-4c87-a84d-cd3f55bd14d2",
-                "contractUrl":"/pdf/cbc34689-8fbf-4c78-91f1-e3b569f36e8f.pdf",
-                "status":0
-            },
-            {
-                "contractId":"f75174a6-e506-4ac0-9129-3695a78b6041",
-                "contractName":"借款合同（适用于借款人是法人）",
-                "contractNo":"f75174a6-e506-4ac0-9129-3695a78b6041",
-                "contractUrl":"/pdf/7c257f7c-b9be-4414-86a4-063ecd9d51cd.pdf",
-                "status":0
+                contractId: '1',
+                contractUrl: 'http://10.130.2.220:3000/uploads/1534476344937.png',
+                contractName: '合同一'
             }
         ],
         "currencyDesc":"人民币",
         "currencyName":"RMB",
         "custFromId":null,
-        "custFromName":"深圳市新威達電子有限公司",
-        "custToId":"1114101203598",
-        "custToName":"煙臺美怡餐飲管理有限公司",
-        "factorCompany":null,
+        "custFromName":null,
+        "custToId":null,
+        "custToName":null,
+        "discountApplyAmt":0,
+        "discountApplyDate":null,
+        "discountLoanAmt":0,
+        "factorCompany":"深圳市富龍小額貸款有限公司",
+        "historyCustToName":null,
+        "hostCode":"HFZZSZ",
         "invoiceCustomList":[
             {
-                "invoiceAfterTaxAmt":115999.54,
+                "invoiceAfterTaxAmt":783,
                 "invoiceCurrency":1,
                 "invoiceCurrencyDesc":"人民币",
-                "invoiceDate":1528819200000,
-                "invoiceIsSelected":1,
-                "invoiceNo":"18058679"
-            },
-            {
-                "invoiceAfterTaxAmt":115999.54,
-                "invoiceCurrency":1,
-                "invoiceCurrencyDesc":"人民币",
-                "invoiceDate":1528819200000,
-                "invoiceIsSelected":1,
-                "invoiceNo":"18058699"
-            },
-            {
-                "invoiceAfterTaxAmt":115999.54,
-                "invoiceCurrency":1,
-                "invoiceCurrencyDesc":"人民币",
-                "invoiceDate":1528819200000,
+                "invoiceDate":1531152000000,
                 "invoiceIsSelected":0,
-                "invoiceNo":"18058677"
-            },
-            {
-                "invoiceAfterTaxAmt":115999.54,
-                "invoiceCurrency":1,
-                "invoiceCurrencyDesc":"人民币",
-                "invoiceDate":1528819200000,
-                "invoiceIsSelected":0,
-                "invoiceNo":"18058678"
-            },
-            {
-                "invoiceAfterTaxAmt":115999.54,
-                "invoiceCurrency":1,
-                "invoiceCurrencyDesc":"人民币",
-                "invoiceDate":1528819200000,
-                "invoiceIsSelected":0,
-                "invoiceNo":"18058699"
-            },
-            {
-                "invoiceAfterTaxAmt":115999.54,
-                "invoiceCurrency":1,
-                "invoiceCurrencyDesc":"人民币",
-                "invoiceDate":1528819200000,
-                "invoiceIsSelected":0,
-                "invoiceNo":"18058680"
-            },
-            {
-                "invoiceAfterTaxAmt":115999.54,
-                "invoiceCurrency":1,
-                "invoiceCurrencyDesc":"人民币",
-                "invoiceDate":1528819200000,
-                "invoiceIsSelected":0,
-                "invoiceNo":"18058681"
+                "invoiceNo":"08367624"
             }
         ],
-        "isAvailableInvoice":1,
-        "isMasterAr":0,
-        "parentChainId":"AR20180627000007",
+        "isAvailableInvoice":0,
+        "isMasterAr":1,
+        "masterChainId":"AR20180801001156",
+        "originalUnitName":null,
+        "parentChainId":null,
+        "payFineAmt":null,
+        "payFineDays":0,
+        "payInterestAmt":null,
+        "payPrincipalAmt":null,
+        "payServiceAmt":null,
         "poNumber":null,
-        "sourceChainId":"AR20180627000007",
+        "prepayServiceAmt":null,
+        "remark":null,
+        "signStatusId":0,
+        "signStatusName":"已完成",
+        "sourceChainId":null,
         "transSerial":null,
-        "transSerialNo":"3518109d-6562-46a1-873e-773c78f84288",
-        "transType":"arpay",
-        "remark": '备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息'
+        "transSerialNo":null,
+        "transType":null,
+        "transUnitName":null
     },
     "msg":"请求成功",
     "recordsTotal":1,
@@ -969,7 +955,7 @@ fenboList:{
             "buyerCustNo":"A086362",
             "companyName":"基準精密工業(惠州)有限公司深圳龍華分公司",
             "companyNameOfL1":"山西英和貿易有限公司",
-            "custFromName":"山西英和貿易有限公司",
+            "custFromName":"山西英和貿易有限公司山西英和貿易有限公司山西英和貿易有限公司",
             "custId":"09201912016466",
             "custToId":"11031049033568",
             "custToName":"FJF",
@@ -983,7 +969,7 @@ fenboList:{
             "billId":"HOI-HC000222",
             "buyerCustNo":"A086440",
             "companyName":"晉城富泰華精密電子有限公司",
-            "companyNameOfL1":"山西英和貿易有限公司",
+            "companyNameOfL1":"山西英和貿易有限公司山西英和貿易有限公司山西英和貿易有限公司山西英和貿易有限公司",
             "custFromName":"山西英和貿易有限公司",
             "custId":"09201912016466",
             "custToId":"11031049033568",
@@ -1122,13 +1108,14 @@ fenboDetail:{
     "data":{
         factoringApId:'FJF',
         factoringClientId:'FJF',
-        companyNameOfL1:'山西英和貿易有限公司',
+        companyNameOfL1:'山西英和貿易有限公司山西英和貿易有限公司山西英和貿易有限公司山西英和貿易有限公司',
         custToName:'FJF',
         companyName:'基準精密工業(惠州)有限公司深圳龍華分公司',
-        custFromName:'山西英和貿易有限公司',
+        custFromName:'山西英和貿易有限公司山西英和貿易有限公司山西英和貿易有限公司山西英和貿易有限公司',
         buyerCustNo:'A086362',
         payBankAccount:null,
         receiveBankName:'建設銀行',
+        auditedTypeId: 1,
         payBankName:null,
         receiveBankAccount:'5006007008000',
         factoringCustId:'11031049033568',
@@ -1169,7 +1156,7 @@ getArData:{
             "masterChainId":"AR20180605000007",
             "transAmt":100,
             "transDate":1528185776000,
-            "transSerialNo":"28de0e69-4a35-4d6f-a945-3b917e100e69"
+            "transSerialNo":"59fcc1cc-45c8-4407-8a99-40eac08b42fb"
         },
         {
             "arStatusTypeName":"已授讓",
@@ -1199,7 +1186,7 @@ getArData:{
             "masterChainId":"AR20180605000005",
             "transAmt":100,
             "transDate":1528185770000,
-            "transSerialNo":"33f7a1eb-8e7e-4132-86f0-94f7030995c2"
+            "transSerialNo":"fae6f9eb-dfde-491f-b5ba-40f949a59b76"
         },
         {
             "arStatusTypeName":"已授讓",
@@ -1214,7 +1201,7 @@ getArData:{
             "masterChainId":"AR20180605000004",
             "transAmt":100,
             "transDate":1528179828000,
-            "transSerialNo":"faa8350b-0ea0-4b72-b17b-b6448c43d791"
+            "transSerialNo":"fae6f9eb-dfde-491f-b5ba-40f949a59b76"
         },
         {
             "arStatusTypeName":"已授讓",
@@ -1229,7 +1216,7 @@ getArData:{
             "masterChainId":"AR20180605000002",
             "transAmt":5,
             "transDate":1528165891000,
-            "transSerialNo":"511f735e-8797-4e3e-8474-10e5a6252672"
+            "transSerialNo":"fae6f9eb-dfde-491f-b5ba-40f949a59b76"
         },
         {
             "arStatusTypeName":"已授讓",
@@ -1244,7 +1231,7 @@ getArData:{
             "masterChainId":"AR20180601000003",
             "transAmt":17,
             "transDate":1527837585000,
-            "transSerialNo":"2c818c3c-5c9d-4743-a37a-b7149f0546f8"
+            "transSerialNo":"fae6f9eb-dfde-491f-b5ba-40f949a59b76"
         },
         {
             "arStatusTypeName":"已授讓",
@@ -1289,7 +1276,7 @@ getArData:{
             "masterChainId":"AR20171108000005",
             "transAmt":100,
             "transDate":1510118230000,
-            "transSerialNo":"5a50b00f-2240-455f-9593-12732beb6d24"
+            "transSerialNo":"0909391d-63eb-44ff-b93a-93c18b6454bd"
         }
     ],
     "msg":"请求成功",

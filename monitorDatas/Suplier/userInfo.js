@@ -3,7 +3,7 @@ const userInfo=
 {
     "data":{
         "accountOpeningBranch":"龍華",
-        "bankAccount":"5555666677778",
+        "bankAccount":"5555666677778555231",
         "bankCardAddress":"",
         "bankCity":"",
         "bankIsUsableDesc":null,
@@ -37,7 +37,7 @@ const userInfo=
         "createip":null,
         "createtime":null,
         "creditCode":"91440300767575635H",
-        "custId":"09210827048265",
+        "custId":"93ab75cb-30b2-4601-b798-2f72eba084ab",
         "custNickname":'牛城',
         "custPassword":null,
         "custType":null,
@@ -86,4 +86,161 @@ const userInfo=
     "recordsTotal":null,
     "status":1
 }
-module.exports=userInfo
+const thirdLogin ={
+    third1:{
+        "data": {
+          "thirdLoginRes": [
+              {
+                  "ContactIdNum": "350583199004132895",
+                  "ContactMail": "wen-hao.wu@mail.foxconn.com",
+                  "ContactName": "wwenhao",
+                  "ContactTel": "15507580148",
+                  "Enable": true,
+                  "Id": "7096b902-52ab-468d-808e-a8db00ad570c",
+                  "IsDel": false,
+                  "IsVerified": true,
+                  "LegalEntityIdNum": "341200198405092975",
+                  "LegalEntityName": "吴文豪",
+                  "LegalEntityTel": "15612345678",
+                  "Name": "海顺建设集团股份有限公司",
+                  "Usci": "91330200750395128A",
+                  "contactIdNum": "350583199004132895",
+                  "contactMail": "wen-hao.wu@mail.foxconn.com",
+                  "contactName": "wwenhao",
+                  "contactTel": "15507580148",
+                  "enable": true,
+                  "id": "7096b902-52ab-468d-808e-a8db00ad570c",
+                  "isDel": false,
+                  "isVerified": true,
+                  "legalEntityIdNum": "341200198405092975",
+                  "legalEntityName": "吴文豪",
+                  "legalEntityTel": "15612345678",
+                  "name": "海顺建设集团股份有限公司",
+                  "usci": "91330200750395128A"
+              },
+              {
+                "ContactIdNum": "350583199004132895",
+                "ContactMail": "wen-hao.wu@mail.foxconn.com",
+                "ContactName": "wwenhao",
+                "ContactTel": "15507580148",
+                "Enable": true,
+                "Id": "8409f6af-49ba-47cb-94eb-a982011aee29",
+                "IsDel": false,
+                "IsVerified": true,
+                "LegalEntityIdNum": "",
+                "LegalEntityName": "孙爱敏",
+                "LegalEntityTel": null,
+                "Name": "鹏鼎测试供应商6",
+                "Usci": "911310256813951665",
+                "contactIdNum": "350583199004132895",
+                "contactMail": "wen-hao.wu@mail.foxconn.com",
+                "contactName": "wwenhao",
+                "contactTel": "15507580148",
+                "enable": true,
+                "id": "8409f6af-49ba-47cb-94eb-a982011aee29",
+                "isDel": false,
+                "isVerified": true,
+                "legalEntityIdNum": "",
+                "legalEntityName": "孙爱敏",
+                "legalEntityTel": null,
+                "name": "鹏鼎测试供应商6",
+                "usci": "911310256813951665"
+              }
+          ],
+          "user": {
+              "Id": "24e712e5-9f64-43b1-a809-a8ce00f603fb",
+              "IdNum": "350583199004132895",
+              "IsAdmin": false,
+              "IsDel": false,
+              "IsEnable": true,
+              "IsVerified": true,
+              "Mail": "wen-hao.wu@mail.foxconn.com",
+              "Name": "wwenhao",
+              "Tel": "15507580148",
+              "id": "24e712e5-9f64-43b1-a809-a8ce00f603fb",
+              "idNum": "350583199004132895",
+              "isAdmin": false,
+              "isDel": false,
+              "isEnable": true,
+              "isVerified": true,
+              "mail": "wen-hao.wu@mail.foxconn.com",
+              "name": "wwenhao",
+              "tel": "15507580148"
+          }
+      },
+      "msg": "从亿签网获取认证公司成功",
+      "recordsTotal": null,
+      "status": 1
+      },
+      third2:{
+        "data": {
+          "corp": {
+              "ContactIdNum": "350583199004132895",
+              "ContactMail": "wen-hao.wu@mail.foxconn.com",
+              "ContactName": "wwenhao",
+              "ContactTel": "15507580148",
+              "Enable": true,
+              "Id": "ae890fda-540e-48c3-99e1-a96f009e421a",
+              "IsDel": false,
+              "IsVerified": true,
+              "LegalEntityIdNum": "",
+              "LegalEntityName": "张缘平",
+              "LegalEntityTel": null,
+              "Name": "鹏鼎测试供应商",
+              "Usci": "91110112663147847E",
+              "contactIdNum": "350583199004132895",
+              "contactMail": "wen-hao.wu@mail.foxconn.com",
+              "contactName": "wwenhao",
+              "contactTel": "15507580148",
+              "enable": true,
+              "id": "ae890fda-540e-48c3-99e1-a96f009e421a",
+              "isDel": false,
+              "isVerified": true,
+              "legalEntityIdNum": "",
+              "legalEntityName": "张缘平",
+              "legalEntityTel": null,
+              "name": "鹏鼎测试供应商",
+              "usci": "91110112663147847E"
+          },
+          "custName": "",
+          "user": {
+              "Id": "24e712e5-9f64-43b1-a809-a8ce00f603fb",
+              "IdNum": "350583199004132895",
+              "IsAdmin": false,
+              "IsDel": false,
+              "IsEnable": true,
+              "IsVerified": true,
+              "Mail": "wen-hao.wu@mail.foxconn.com",
+              "Name": "wwenhao",
+              "Tel": "15507580148",
+              "id": "24e712e5-9f64-43b1-a809-a8ce00f603fb",
+              "idNum": "350583199004132895",
+              "isAdmin": false,
+              "isDel": false,
+              "isEnable": true,
+              "isVerified": true,
+              "mail": "wen-hao.wu@mail.foxconn.com",
+              "name": "wwenhao",
+              "tel": "15507580148"
+          },
+          "vendorCode": "VCN0019826"
+      },
+      "msg": "返回结果正常",
+      "recordsTotal": null,
+      "status": 1
+      },
+      third3:{
+        "data": {
+            "exist": false,
+            "flag": true,
+            "kaptcha": null,
+            "password": "K<FX?c2<",
+            "phone": "VCN0019826",
+            "secretPwd": "2066a77e7f11279dc95f01a0f0f5613e06a62401b974e9336d2146fc8f1ae18b"
+        },
+        "msg": "创建账号密码成功!",
+        "recordsTotal": null,
+        "status": 1
+    }
+}
+module.exports={userInfo,thirdLogin}

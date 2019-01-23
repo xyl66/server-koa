@@ -34,9 +34,11 @@ module.exports.regCMPList ={
     companyName: '江西英达',
     legalPerson: '刘伟',
     establishDate: 1496592000000, // 公司成立日期
+    taskSynEndDate: 1496592000000,
+
     registeredCapital: 192, // 公司注册资本
     status: 1, // 公司状态
-    contractSigningType: 1, // 合同签署方式
+    contractSignType: 1, // 合同签署方式
     companyAddress: 'String', // 公司地址
     customerManagerName: 'String', // 客户经理
     custId: 'String' // 客户Id
@@ -45,9 +47,10 @@ module.exports.regCMPList ={
     companyName: '江西英达',
     legalPerson: '刘伟',
     establishDate: 1496592000000, // 公司成立日期
+    taskSynEndDate: new Date(),
     registeredCapital: 192, // 公司注册资本
     status: 2, // 公司状态
-    contractSigningType: 1, // 合同签署方式
+    contractSignType: 2, // 合同签署方式
     companyAddress: 'String', // 公司地址
     customerManagerName: 'String', // 客户经理
     custId: 'String' // 客户Id
